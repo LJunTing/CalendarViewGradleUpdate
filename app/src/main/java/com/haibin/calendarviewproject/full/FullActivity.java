@@ -14,6 +14,7 @@ import com.haibin.calendarviewproject.base.activity.BaseActivity;
 import com.haibin.calendarviewproject.colorful.ColorfulActivity;
 import com.haibin.calendarviewproject.custom.CustomActivity;
 import com.haibin.calendarviewproject.index.IndexActivity;
+import com.haibin.calendarviewproject.meizu.MeiZuActivity;
 import com.haibin.calendarviewproject.simple.SimpleActivity;
 
 import java.util.HashMap;
@@ -131,20 +132,32 @@ public class FullActivity extends BaseActivity implements
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.ll_flyme:
-                CustomActivity.show(this);
-                break;
-            case R.id.ll_simple:
-                SimpleActivity.show(this);
-                break;
-            case R.id.ll_colorful:
-                ColorfulActivity.show(this);
-                break;
-            case R.id.ll_index:
-                IndexActivity.show(this);
-                break;
+        if (v.getId()==R.id.ll_flyme){
+            MeiZuActivity.show(this);
         }
+        else   if (v.getId()==R.id.ll_simple){
+            SimpleActivity.show(this);
+        }
+        else   if (v.getId()==R.id.ll_colorful){
+            ColorfulActivity.show(this);
+        }
+        else   if (v.getId()==R.id.ll_index){
+            IndexActivity.show(this);
+        }
+//        switch (v.getId()) {
+//            case R.id.ll_flyme:
+//                CustomActivity.show(this);
+//                break;
+//            case R.id.ll_simple:
+//                SimpleActivity.show(this);
+//                break;
+//            case R.id.ll_colorful:
+//                ColorfulActivity.show(this);
+//                break;
+//            case R.id.ll_index:
+//                IndexActivity.show(this);
+//                break;
+//        }
     }
 
     @Override

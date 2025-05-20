@@ -2,6 +2,7 @@
 apply plugin: 'com.android.application'
 
 android {
+    namespace "com.haibin.calendarviewproject"
     compileSdkVersion 28
     //noinspection GradleDependency
     defaultConfig {

@@ -17,6 +17,7 @@ import com.haibin.calendarviewproject.Article;
 import com.haibin.calendarviewproject.ArticleAdapter;
 import com.haibin.calendarviewproject.R;
 import com.haibin.calendarviewproject.base.activity.BaseActivity;
+import com.haibin.calendarviewproject.colorful.ColorfulActivity;
 import com.haibin.calendarviewproject.group.GroupItemDecoration;
 import com.haibin.calendarviewproject.group.GroupRecyclerView;
 import com.haibin.calendarviewproject.index.IndexActivity;
@@ -148,19 +149,31 @@ public class SingleActivity extends BaseActivity implements
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.ll_flyme:
-                MeiZuActivity.show(this);
-                break;
-            case R.id.ll_simple:
-                SimpleActivity.show(this);
-                break;
-            case R.id.ll_colorful:
-                SingleActivity.show(this);
-                break;
-            case R.id.ll_index:
-                IndexActivity.show(this);
-                break;
+//        switch (v.getId()) {
+//            case R.id.ll_flyme:
+//                MeiZuActivity.show(this);
+//                break;
+//            case R.id.ll_simple:
+//                SimpleActivity.show(this);
+//                break;
+//            case R.id.ll_colorful:
+//                SingleActivity.show(this);
+//                break;
+//            case R.id.ll_index:
+//                IndexActivity.show(this);
+//                break;
+//        }
+        if (v.getId()==R.id.ll_flyme){
+            MeiZuActivity.show(this);
+        }
+        else   if (v.getId()==R.id.ll_simple){
+            SimpleActivity.show(this);
+        }
+        else   if (v.getId()==R.id.ll_colorful){
+            ColorfulActivity.show(this);
+        }
+        else   if (v.getId()==R.id.ll_index){
+            IndexActivity.show(this);
         }
     }
 

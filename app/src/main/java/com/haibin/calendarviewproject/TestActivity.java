@@ -6,6 +6,10 @@ import android.view.View;
 
 import com.haibin.calendarview.CalendarView;
 import com.haibin.calendarviewproject.base.activity.BaseActivity;
+import com.haibin.calendarviewproject.colorful.ColorfulActivity;
+import com.haibin.calendarviewproject.index.IndexActivity;
+import com.haibin.calendarviewproject.meizu.MeiZuActivity;
+import com.haibin.calendarviewproject.simple.SimpleActivity;
 
 /**
  * 测试界面
@@ -39,13 +43,12 @@ public class TestActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.iv_next:
-                mCalendarView.scrollToNext(false);
-                break;
-            case R.id.iv_pre:
-                mCalendarView.scrollToPre(false);
-                break;
+
+        if (v.getId()==R.id.iv_next){
+            mCalendarView.scrollToNext(false);
+        }
+        else   if (v.getId()==R.id.iv_pre){
+            mCalendarView.scrollToPre(false);
         }
     }
 }
